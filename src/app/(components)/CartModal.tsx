@@ -1,6 +1,7 @@
 import { useCart } from "@/providers/Cart";
 import React from "react";
 import Image from "next/image";
+import Modal from "@/components/Modal";
 
 function CartModal() {
   const { cart, isCartModalOpen, toggleModal, addToCart, removeFromCart } =
@@ -11,7 +12,7 @@ function CartModal() {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <Modal isOpen={isCartModalOpen} closeModal={toggleModal}>
       <div className="bg-white rounded-lg shadow-lg p-3 md:p-6 lg:p-6 w-fit  relative text-black">
         <h1 className="text-center font-bold">Your Cart</h1>
         <table className="w-full border-collapse border-gray-200 text-xs md:text-base lg:text-2xl">
@@ -88,7 +89,7 @@ function CartModal() {
           X
         </button>
       </div>
-    </div>
+    </Modal>
   );
 }
 
