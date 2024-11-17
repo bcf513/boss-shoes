@@ -16,7 +16,7 @@ function Header() {
         data-nimg="1"
         className="h-24 w-24"
         style={{ color: "transparent" }}
-        src="/svgs/BossShoesLogo.svg"
+        src="/BossShoesLogo.svg"
       />
       <div className="absolute right-0">
         <div className="hidden lg:flex items-center gap-5 rounded-l-3xl p-4 backdrop-blur-sm bg-white/30 ">
