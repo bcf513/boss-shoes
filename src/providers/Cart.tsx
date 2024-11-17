@@ -5,7 +5,7 @@ import React, {
   useContext,
   useEffect,
 } from "react";
-import { Product, ProductInCart } from "../../types/cart";
+import { Product, ProductInCart } from "../types/cart";
 
 interface CartContextProps {
   isCartModalOpen: boolean;

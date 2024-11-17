@@ -1,4 +1,4 @@
-import { Product } from "../../types/cart";
+import { Product } from "../types/cart";
 
 const shoes: Product[] = [
   {
