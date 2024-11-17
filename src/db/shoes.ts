@@ -1,4 +1,6 @@
-const shoes = [
+import { Product } from "../../types/cart";
+
+const shoes: Product[] = [
   {
     id: 1,
     model: "Green Airoo 1",

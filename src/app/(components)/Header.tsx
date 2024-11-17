@@ -7,8 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { toggleModal } = useCart();
-
+  const { cart, toggleModal } = useCart();
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -25,6 +24,8 @@ function Header() {
       document.removeEventListener("mouseup", handleClickOutside);
     };
   }, [isOpen]);
+
+  const cartTotalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   function openModal() {
     setIsOpen(false);
@@ -73,9 +74,11 @@ function Header() {
             >
               <path d="M243.86,197.65l-14.25-120A20.06,20.06,0,0,0,209.67,60H179.83A52,52,0,0,0,76.17,60H46.33A20.06,20.06,0,0,0,26.39,77.65l-14.25,120A20,20,0,0,0,32.08,220H223.92a20,20,0,0,0,19.94-22.35ZM128,36a28,28,0,0,1,27.71,24H100.29A28,28,0,0,1,128,36ZM36.5,196,49.81,84H206.19L219.5,196Z"></path>
             </svg>
-            <h1 className="absolute -right-3 -bottom-4  w-5 h-5 rounded-full bg-red-500 text-xs flex items-center justify-center text-white">
-              6
-            </h1>
+            {cartTotalItems > 0 && (
+              <h1 className="absolute -right-3 -bottom-4  w-5 h-5 rounded-full bg-red-500 text-xs flex items-center justify-center text-white">
+                {cartTotalItems}
+              </h1>
+            )}
           </div>
         </div>
       </div>
@@ -128,9 +131,11 @@ function Header() {
                 >
                   <path d="M243.86,197.65l-14.25-120A20.06,20.06,0,0,0,209.67,60H179.83A52,52,0,0,0,76.17,60H46.33A20.06,20.06,0,0,0,26.39,77.65l-14.25,120A20,20,0,0,0,32.08,220H223.92a20,20,0,0,0,19.94-22.35ZM128,36a28,28,0,0,1,27.71,24H100.29A28,28,0,0,1,128,36ZM36.5,196,49.81,84H206.19L219.5,196Z"></path>
                 </svg>
-                <h1 className="absolute -right-0 -bottom-0 w-5 h-5 rounded-full bg-red-500 text-xs flex items-center justify-center text-white">
-                  6
-                </h1>
+                {cartTotalItems > 0 && (
+                  <h1 className="absolute -right-0 -bottom-0 w-5 h-5 rounded-full bg-red-500 text-xs flex items-center justify-center text-white">
+                    {cartTotalItems}
+                  </h1>
+                )}
               </div>
             </div>
           </div>

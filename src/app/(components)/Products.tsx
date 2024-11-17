@@ -1,9 +1,12 @@
 import products_data from "@/db/shoes";
+import { useCart } from "@/providers/Cart";
 import Image from "next/image";
 
 import React from "react";
 
 function Products() {
+  const { addToCart } = useCart();
+
   return (
     <div className="flex flex-col justify-center w-full">
       <h1 className="flex justify-center font-bold text-3xl">Our Products</h1>
@@ -32,6 +35,7 @@ function Products() {
               <button
                 type="button"
                 className="border-spacing-4 border-solid border-white rounded-lg border-2 p-2"
+                onClick={() => addToCart(product)}
               >
                 <svg
                   stroke="currentColor"
