@@ -26,33 +26,39 @@ function CartModal() {
           <tbody>
             {cart.map((productInCart) => (
               <tr key={productInCart.id}>
-                <td className="flex flex-col items-center gap-4 p-2 md:flex-row lg:flex-row">
-                  <Image
-                    alt={productInCart.model}
-                    src={productInCart.photo}
-                    width={50}
-                    height={50}
-                    className="h-10 w-10 drop-shadow-xl rounded-md bg-gray-200"
-                  />
-                  {productInCart.model}
+                <td className="flex flex-col items-center gap-4 p-2 md:flex-row lg:flex-row align-middle">
+                  <div className="p-2 flex items-center justify-center gap-2 my-auto align-middle">
+                    <Image
+                      alt={productInCart.model}
+                      src={productInCart.photo}
+                      width={50}
+                      height={50}
+                      className="h-10 w-10 drop-shadow-xl rounded-md bg-gray-200"
+                    />
+                    {productInCart.model}
+                  </div>
                 </td>
-                <td className=" p-2 whitespace-nowrap">
+                <td className=" p-2 whitespace-nowrap align-middle">
                   <p className="w-fit h-fit">R$ {productInCart.price}</p>
                 </td>
-                <td className="p-2 flex items-center justify-center gap-2 ">
-                  <button
-                    className="w-6 h-6 rounded-full bg-gray-200 hover:bg-red-400 flex justify-center items-center"
-                    onClick={() => removeFromCart(productInCart.id)}
-                  >
-                    -
-                  </button>
-                  <span className="text-center">{productInCart.quantity}</span>
-                  <button
-                    className="w-6 h-6 rounded-full bg-gray-200 hover:bg-green-400 flex justify-center items-center"
-                    onClick={() => addToCart(productInCart)}
-                  >
-                    +
-                  </button>
+                <td>
+                  <div className="p-2 h-full flex items-center justify-center gap-2 my-auto ">
+                    <button
+                      className="w-6 h-6 rounded-full bg-gray-200 hover:bg-red-400 flex justify-center items-center"
+                      onClick={() => removeFromCart(productInCart.id)}
+                    >
+                      -
+                    </button>
+                    <span className="text-center">
+                      {productInCart.quantity}
+                    </span>
+                    <button
+                      className="w-6 h-6 rounded-full bg-gray-200 hover:bg-green-400 flex justify-center items-center"
+                      onClick={() => addToCart(productInCart)}
+                    >
+                      +
+                    </button>
+                  </div>
                 </td>
                 <td className=" p-2 whitespace-nowrap">
                   R$ {productInCart.quantity * productInCart.price}
