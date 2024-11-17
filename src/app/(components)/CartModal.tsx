@@ -28,7 +28,7 @@ function CartModal() {
               <tr key={productInCart.id}>
                 <td className="flex flex-col items-center gap-4 p-2 md:flex-row lg:flex-row">
                   <Image
-                    alt="Fit"
+                    alt={productInCart.model}
                     src={productInCart.photo}
                     width={50}
                     height={50}

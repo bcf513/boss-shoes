@@ -1,4 +1,10 @@
-import React, { createContext, useState, ReactNode, useContext } from "react";
+import React, {
+  createContext,
+  useState,
+  ReactNode,
+  useContext,
+  useEffect,
+} from "react";
 import { Product, ProductInCart } from "../../types/cart";
 
 interface CartContextProps {
@@ -14,6 +20,17 @@ const CartContext = createContext<CartContextProps | undefined>(undefined);
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [cart, setCart] = useState<ProductInCart[]>([]);
+
+  useEffect(() => {
+    const cart = localStorage.getItem("cart");
+    if (cart) {
+      setCart(JSON.parse(cart));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const toggleModal = () => {
     setIsCartModalOpen(!isCartModalOpen);
