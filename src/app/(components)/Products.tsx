@@ -16,14 +16,16 @@ function Products() {
             className="flex flex-col items-center gap-2 rounded-b-3xl p-6 bg-gradient-to-b from-transparent to-white/30 backdrop-blur-sm"
             key={product.id}
           >
-            <Image
-              alt={product.model}
-              src={product.photo}
-              width={500}
-              height={500}
-              className="w-auto h-auto drop-shadow-xl "
-              style={{ color: "transparent" }}
-            />
+            <div className="w-64 h-64 relative">
+              <Image
+                alt={product.model}
+                src={product.photo}
+                layout="fill"
+                objectFit="cover"
+                className="drop-shadow-2xl"
+                style={{ color: "transparent" }}
+              />
+            </div>
             <h3 className="font-bold text-4xl w-fit text-center">
               {product.model}
             </h3>
