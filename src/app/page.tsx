@@ -6,6 +6,7 @@ import CartModal from "./(components)/CartModal";
 import Header from "./(components)/Header";
 import Products from "./(components)/Products";
 import ProductQualityHero from "./(components)/ProductQualityHero";
+import CustomersOpinions from "./(components)/CustomersOpinions";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <AdvertisementCards />
         <Products />
         <ProductQualityHero />
+        <CustomersOpinions />
       </main>
     </CartProvider>
   );

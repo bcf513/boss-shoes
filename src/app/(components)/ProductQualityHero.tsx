@@ -61,9 +61,7 @@ function ProductQualityHero() {
           height={500}
           className="absolute w-[130%] h-[130%] object-cover"
           src="/images/Green_Airoo-7.png"
-          //   style={{ top: "5%", right: "10%" }}
           style={{ right: "10%" }}
-          //   style={{ bottom: "5%", right: "5%" }}
           alt="Green Airoo 7"
         />
       </div>
