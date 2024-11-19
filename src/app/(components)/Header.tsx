@@ -34,7 +34,7 @@ function Header() {
   }
 
   return (
-    <header className="flex justify-between items-center w-full p-4">
+    <header className="absolute flex justify-between items-center w-full p-4">
       <img
         alt="Logo"
         loading="lazy"
