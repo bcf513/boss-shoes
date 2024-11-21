@@ -12,7 +12,7 @@ import Hero from "./(components)/Hero";
 export default function Home() {
   return (
     <CartProvider>
-      <main className="relative flex flex-col items-center justify-between gap-24">
+      <main className="relative flex flex-col items-center justify-between gap-6 lg:gap-6">
         <CartModal />
         <Header />
         <Hero />

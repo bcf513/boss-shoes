@@ -24,7 +24,7 @@ function Hero() {
           />
         </div>
       </div>
-      <div className="relative mt-4 ">
+      <div className="relative mt-4 text-base md:text-2xl">
         <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col gap-4 w-60">
           <div className="flex justify-between w-full items-center">
             <FaLessThan />
@@ -81,7 +81,7 @@ function Hero() {
             </button> */}
           </div>
         </div>
-        <div className=" flex flex-col lg:flex-row justify-between w-full mt-16 lg:mt-0">
+        <div className=" flex flex-col md:flex-row justify-between w-full pt-16 lg:pt-0 gap-6">
           <div className="flex flex-col ml-6 text-left gap-6">
             <div>
               <h1 className="font-bold text-3xl">Walk Like a Boss</h1>
@@ -93,7 +93,7 @@ function Hero() {
               Explore
             </button>
           </div>
-          <div className="flex flex-col gap-2 p-6 pl-20 backdrop-blur-sm bg-white/30 rounded-l-2xl">
+          <div className="flex flex-col gap-2 p-6 pl-20 backdrop-blur-sm bg-white/30 rounded-l-2xl self-end">
             <div className="absolute -left-10 -top-1">
               <div className="relative">
                 <Image
