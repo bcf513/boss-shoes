@@ -13,7 +13,7 @@ function CartModal() {
 
   return (
     <Modal isOpen={isCartModalOpen} closeModal={toggleModal}>
-      <div className="bg-white rounded-lg shadow-lg p-3 md:p-6 lg:p-6 w-fit  relative text-black">
+      <div className="w-fit text-black">
         <h1 className="text-center font-bold">Your Cart</h1>
         <table className="w-full border-collapse border-gray-200 text-xs md:text-base lg:text-2xl">
           <thead>
