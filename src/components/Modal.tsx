@@ -40,7 +40,7 @@ function Modal({
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-10"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-30"
       aria-labelledby="modal-title"
       aria-describedby="modal-description"
     >
