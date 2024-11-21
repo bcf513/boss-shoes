@@ -14,8 +14,8 @@ function ProductQualityCard({
   icon: ReactElement;
 }>) {
   return (
-    <div className="flex gap-4">
-      <div className="flex border-spacing-4 border-solid border-white rounded-2xl border-2 p-2 items-center">
+    <div className="flex gap-4 items-center">
+      <div className="flex border-spacing-4 border-solid border-white rounded-2xl border-2 p-2 items-center h-fit w-fit">
         {React.cloneElement(icon, { size: "2.2em" })}
       </div>
       <div>
@@ -28,10 +28,10 @@ function ProductQualityCard({
 
 function ProductQualityHero() {
   return (
-    <div className="flex flex-col md:flex-row h-full">
+    <div className="flex flex-col md:flex-row w-full h-full">
       <div className="flex flex-col justify-center flex-1 p-4 gap-8">
         <h1 className="font-bold text-4xl w-fit ">Our Product Quality</h1>
-        <div className="flex flex-col gap-4" style={{ maxWidth: "70%" }}>
+        <div className="flex flex-col gap-4 md:max-w-[70%]">
           <ProductQualityCard
             title="Best Quality Shoes"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -49,9 +49,9 @@ function ProductQualityHero() {
           />
         </div>
       </div>
-      <div className="relative flex-1 flex items-center justify-center  p-4">
+      <div className="relative w-full h-full flex-1 flex items-center justify-center  p-4">
         <div
-          className="relative w-96 h-96 rounded-full bg-gradient-to-b opacity-75"
+          className="relative w-60 h-60 md:w-96 md:h-96 rounded-full bg-gradient-to-b opacity-75"
           style={{
             background: "linear-gradient(to bottom, #1BADFF, transparent)",
           }}

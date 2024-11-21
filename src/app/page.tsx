@@ -16,7 +16,7 @@ export default function Home() {
         <CartModal />
         <Header />
         <Hero />
-        <div className="flex flex-col items-center justify-between gap-36 p-12">
+        <div className="flex flex-col items-center justify-between gap-12 lg:gap-36 p-6 lg:p-12">
           <AdvertisementCards />
           <Products />
           <ProductQualityHero />

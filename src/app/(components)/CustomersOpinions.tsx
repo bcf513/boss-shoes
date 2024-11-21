@@ -37,7 +37,7 @@ function CustomerOpinionCard({
 
 function CustomersOpinions() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 w-full">
       <div className="text-center">
         <h1 className="text-bold text-4xl">What Our Happy Customers Says</h1>
         <hr className="w-24 my-4 border-t-2 border-white mx-auto" />
@@ -46,7 +46,7 @@ function CustomersOpinions() {
           reviews that they have given us.
         </p>
       </div>
-      <div className="flex gap-20">
+      <div className="flex flex-col justify-evenly gap-8 lg:flex-row w-full">
         <CustomerOpinionCard
           name="John Doe"
           opinion="Lorem ipsum dolor sit amet, consectetur adipiscing elit"

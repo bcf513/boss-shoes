@@ -10,7 +10,7 @@ function Products() {
   return (
     <div className="flex flex-col justify-center w-full">
       <h1 className="flex justify-center font-bold text-3xl">Our Products</h1>
-      <div className="grid grid-flow-row-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-flow-row-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
         {products_data.map((product) => (
           <div
             className="flex flex-col items-center gap-2 rounded-b-3xl p-6 bg-gradient-to-b from-transparent to-white/30 backdrop-blur-sm"
